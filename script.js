@@ -5,11 +5,11 @@ counters.forEach(counter => {
 
   const updateCounter = () => {
     const target = +counter.getAttribute('data-target') // data target is a string attribute + changes it to a number
-    const c = +counter.innerText
-    const increment = target / 200
+    const count = +counter.innerText
+    const increment = target / 200 // increasing this number slows down the count
 
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`
+    if (count < target) {
+      counter.innerText = `${Math.ceil(count + increment)}`
       setTimeout(updateCounter, 1)
     } else {
       counter.innerText = target
