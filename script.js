@@ -4,7 +4,7 @@ counters.forEach(counter => {
   counter.innerText = '0'
 
   const updateCounter = () => {
-    const target = +counter.getAttribute('data-target')
+    const target = +counter.getAttribute('data-target') // data target is a string attribute + changes it to a number
     const c = +counter.innerText
     const increment = target / 200
 
